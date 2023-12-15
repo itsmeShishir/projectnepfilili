@@ -104,7 +104,7 @@ const RegisterPage = () => {
           </div>
 
           <div className="w-1/2">
-            <img src="/src/Images/sidepic.jpg" alt="" />
+            <img src="/src/images/sidepic.jpg" alt="" />
           </div>
         </div>
       </section>

@@ -16,23 +16,21 @@ import ForgetPasswordPage from "./pages/auth/forgetpasswordPage";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="aboutus" element={<AboutPage />} />
-        <Route path="blogs" element={<BlogPage />} />
-        <Route path="category" element={<CategoryPage />} />
-        <Route path="jobs" element={<JobsPage />} />
-        <Route path="location" element={<LocationPage />} />
-        <Route path="details" element={<DetailPage />} />
-        <Route path="contact" element={<ContactPage />} />
-        <Route path="*" element={<ErrorPage />} />
-        {/* end Frontend Part */}
-        {/* Auth Starting Routes */}
-        <Route path="auth/login" element={<LoginPage />} />
-        <Route path="auth/register" element={<RegisterPage />} />
-        <Route path="auth/forgetpassword" element={<ForgetPasswordPage />} />
-        {/* Auth Ending Routes */}
-      </Route>
+      <Route path="/" element={<HomePage />} />
+      <Route path="aboutus" element={<AboutPage />} />
+      <Route path="blogs" element={<BlogPage />} />
+      <Route path="category" element={<CategoryPage />} />
+      <Route path="jobs" element={<JobsPage />} />
+      <Route path="location" element={<LocationPage />} />
+      <Route path="details" element={<DetailPage />} />
+      <Route path="contact" element={<ContactPage />} />
+      <Route path="*" element={<ErrorPage />} />
+      {/* end Frontend Part */}
+      {/* Auth Starting Routes */}
+      <Route path="auth/login" element={<LoginPage />} />
+      <Route path="auth/register" element={<RegisterPage />} />
+      <Route path="auth/forgetpassword" element={<ForgetPasswordPage />} />
+      {/* Auth Ending Routes */}
     </Routes>
   );
 }
