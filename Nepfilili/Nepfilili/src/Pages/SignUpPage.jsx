@@ -2,6 +2,14 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function SignUpPage() {
+    const [data, setData] = useState({name: "", username:"", email:"", address:"", phone:"", password:""})
+    const handleChange = (e) => {
+        setData((prevData) => ({
+          ...prevData,
+          [e.target.name]: e.target.value
+        }));
+      };
+
   return (
     <div>
         <section className='bg-gray-50 min-h-screen flex items-center justify-center'>
@@ -12,19 +20,17 @@ function SignUpPage() {
                     <h2 className='font-bold flex justify-center text-2xl'>Sign Up</h2>
 
                     <form action="POST" className='flex flex-col gap-5'>
-                        <input id='' type="text" name='name' placeholder='Name' className='p-2 mt-10 rounded-xl border'/>
+                        <input onChange={handleChange} id='name' type="text" name='name' value={data.name} placeholder='Name' className='p-2 mt-10 rounded-xl border'/>
 
-                        <input id='' type="text" name='username' placeholder='Username' className='p-2 rounded-xl border'/>
+                        <input onChange={handleChange}  id='username' type="text" name='username' value={data.username} placeholder='Username' className='p-2 rounded-xl border'/>
 
-                        <input id='' type="text" name='username' placeholder='Address' className='p-2 rounded-xl border'/>
+                        <input onChange={handleChange}  id='address' type="text" name='address' value={data.address} placeholder='Address' className='p-2 rounded-xl border'/>
 
-                        <input id='' type="password" className='p-2 rounded-xl border' name='password' placeholder='Password'/>
-                        
-                        <input id='' type="tel" name='number' placeholder='Phone Number' className='p-2 rounded-xl border'/>
+                        <input onChange={handleChange}  id='telephone' type="tel" name='number' value={data.address} placeholder='Phone Number' className='p-2 rounded-xl border'/>
 
-                        <input id='' type="text" className='p-2 rounded-xl border' name='email' placeholder='Email'/>
+                        <input onChange={handleChange}  id='email' type="text" className='p-2 rounded-xl border' name='email' value={data.email} placeholder='Email'/>
 
-                        <input id='' type="password" className='p-2 rounded-xl border' name='password' placeholder='Password'/>
+                        <input onChange={handleChange}  id='password' type="password" className='p-2 rounded-xl border' name='password' value={data.password} placeholder='Password'/>
                         
 
                         <button type='submit' className='bg-[#6d757a] rounded-full text-white py-2 mt-3 hover:scale-105 duration-300'>Create Account</button>

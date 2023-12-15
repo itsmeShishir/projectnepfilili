@@ -1,25 +1,15 @@
 import React, { useState } from 'react'
-import axios from 'axios'
 import { useNavigate,Link } from 'react-router-dom'
 
 function LoginPage() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [data, setUser] = useState({username: "", password: ""});
 
-    async function submit(e){
-        e.preventDefault();
-
-        try{
-                await axios.post("http://localhost:8000/", {
-                    email,password
-                })
-
-        }
-        catch(e){
-            console.log(e);
-        }
-    }
-
+    const handleChange = (e) => {
+        setData((prevData) => ({
+          ...prevData,
+          [e.target.name]: e.target.value
+        }));
+      };
   return (
 
     <div>
@@ -31,12 +21,11 @@ function LoginPage() {
                     <h2 className='font-bold flex justify-center text-2xl mt-10'>Login</h2>
 
                     <form action="POST" className='flex flex-col gap-5'>
-                        <input type="text" className='p-2 mt-10 rounded-xl border' name='email' placeholder='Enter Your Email' onChange={(e)=>{
-                            setEmail(e.target.value)
-                        }} />
-                        <input type="password" className='p-2 rounded-xl border' name='password' placeholder='Enter Your Password' />
+                        <input type="text" className='p-2 mt-10 rounded-xl border' name='Username' placeholder='Enter Your Username' required value={data.username} onChange={handleChange} />
+                     
+                        <input type="password" className='p-2 rounded-xl border' name='password' placeholder='Enter Your Password' required value={data.password} onChange={handleChange}/>
 
-                        <button className='bg-[#6d757a] rounded-full text-white py-2 mt-5 hover:scale-105 duration-300' onClick={submit}>Login</button>
+                        <button className='bg-[#6d757a] rounded-full text-white py-2 mt-5 hover:scale-105 duration-300'>Login</button>
                     </form>
 
                     <p className='mt-10 text-base border-b items-center justify-center py-4 hover:text-red-500 cursor-pointer'>Forgot Your Password?</p>
