@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Layout from "./pages/frontend/layout";
+import HomePage from "./pages/frontend/homePage";
+import AboutPage from "./pages/frontend/aboutPage";
+import BlogPage from "./pages/frontend/blogPage";
+import JobsPage from "./pages/frontend/jobsPage";
+import LocationPage from "./pages/frontend/locationPage";
+import ContactPage from "./pages/frontend/contactPage";
+import DetailPage from "./pages/frontend/detailPage";
+import CategoryPage from "./pages/frontend/categoriesPage";
+import ErrorPage from "./pages/error/errorPage";
+import LoginPage from "./pages/auth/loginPage";
+import RegisterPage from "./pages/auth/registerPage";
+import ForgetPasswordPage from "./pages/auth/forgetpasswordPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="aboutus" element={<AboutPage />} />
+        <Route path="blogs" element={<BlogPage />} />
+        <Route path="category" element={<CategoryPage />} />
+        <Route path="jobs" element={<JobsPage />} />
+        <Route path="location" element={<LocationPage />} />
+        <Route path="details" element={<DetailPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="*" element={<ErrorPage />} />
+        {/* end Frontend Part */}
+        {/* Auth Starting Routes */}
+        <Route path="auth/login" element={<LoginPage />} />
+        <Route path="auth/register" element={<RegisterPage />} />
+        <Route path="auth/forgetpassword" element={<ForgetPasswordPage />} />
+        {/* Auth Ending Routes */}
+      </Route>
+    </Routes>
   );
 }
 

@@ -1,0 +1,14 @@
+.navbar .colorRed,
+.navbar .colorRed:focus {
+  background: #f14141;
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.navbar .colorRed:hover,
+.navbar .colorRed:focus:hover {
+  color: #fff;
+  background: #970000;
+}
