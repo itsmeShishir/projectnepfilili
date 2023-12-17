@@ -1,115 +1,70 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
+import logo from '../../assets/images/sidepic.jpg' 
+import googlelogo from '../../assets/images/googleicon.svg'
 
-const RegisterPage = () => {
-  const [data, setData] = useState({
-    name: "",
-    username: "",
-    email: "",
-    address: "",
-    phone: "",
-    password: "",
-  });
-  const handleChange = (e) => {
-    setData((prevData) => ({
+function LoginPage() {
+  const [data, setData] = useState({name: "", username: "",email: "",address: "",phone: "",password: "",});
+
+  const handleChange=(e)=>{
+    setData((prevData)=>({
       ...prevData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     }));
   };
 
   return (
     <div>
-      <section className="bg-gray-50 min-h-screen flex items-center justify-center">
-        <div className="bg-gray-100 flex shadow-lg p-5 max-w-3xl">
-          <div className="w-1/2 px-10">
-            <h2 className="font-bold flex justify-center text-2xl">Sign Up</h2>
+      <div className='container d-flex justify-content-center align-items-center min-vh-100'>
 
-            <form action="POST" className="flex flex-col gap-5">
-              <input
-                onChange={handleChange}
-                id="name"
-                type="text"
-                name="name"
-                value={data.name}
-                placeholder="Name"
-                className="p-2 mt-10 rounded-xl border"
-              />
 
-              <input
-                onChange={handleChange}
-                id="username"
-                type="text"
-                name="username"
-                value={data.username}
-                placeholder="Username"
-                className="p-2 rounded-xl border"
-              />
+        <div className='row border p-2 bg-white shadow box-area w-50'>
+              <img src={logo} className="img-fluid mt-2 mb-2" style={{width: "300px"}} />
 
-              <input
-                onChange={handleChange}
-                id="address"
-                type="text"
-                name="address"
-                value={data.address}
-                placeholder="Address"
-                className="p-2 rounded-xl border"
-              />
+          <form action='POST' className='col-md-6 right-box'>
+            <div className='row align-items-center'>
+              <div className="header-text mb-3 mx-2">
+                <h1 className='font-weight-bold text-center fs-2 mt-4 mb-3'>Sign Up</h1>
+              </div>
 
-              <input
-                onChange={handleChange}
-                id="telephone"
-                type="tel"
-                name="number"
-                value={data.address}
-                placeholder="Phone Number"
-                className="p-2 rounded-xl border"
-              />
+              <div className='input-group mb-2'>
+                  <input type="text" id='name' name='name' value={data.name} placeholder='Name' className='form-control form-control-lg bg-light fs-6'  /> 
+               </div>
 
-              <input
-                onChange={handleChange}
-                id="email"
-                type="text"
-                className="p-2 rounded-xl border"
-                name="email"
-                value={data.email}
-                placeholder="Email"
-              />
+               <div className='input-group mb-2'>
+                  <input type="text" id='username' name='username' value={data.username} placeholder='Username' className='form-control form-control-lg bg-light fs-6'  /> 
+               </div>
 
-              <input
-                onChange={handleChange}
-                id="password"
-                type="password"
-                className="p-2 rounded-xl border"
-                name="password"
-                value={data.password}
-                placeholder="Password"
-              />
+               <div className='input-group mb-2'>
+                  <input type="text" id='address' name='address' value={data.address} placeholder='Address' className='form-control form-control-lg bg-light fs-6'  /> 
+               </div>
 
-              <button
-                type="submit"
-                className="bg-[#6d757a] rounded-full text-white py-2 mt-3 hover:scale-105 duration-300"
-              >
-                Create Account
-              </button>
-            </form>
+               <div className='input-group mb-2'>
+                  <input type="tel" id='phone' name='phone' value={data.phone} placeholder='Phone Number' className='form-control form-control-lg bg-light fs-6'  /> 
+               </div>
 
-            <div className="text-sm flex justify-center mt-6">
-              <Link
-                to="/login"
-                className="py-2 px-5 bg-white border rounded-full mt-4 hover:scale-105 duration-300"
-              >
-                Login Page
-              </Link>
+               <div className='input-group mb-2'>
+                  <input type="email" id='email' name='email' value={data.email} placeholder='Email' className='form-control form-control-lg bg-light fs-6'  /> 
+               </div>
+
+               <div className='input-group mb-2'>
+                  <input type="password" id='password' name='password' value={data.password} placeholder='Password' className='form-control form-control-lg bg-light fs-6'  /> 
+               </div>
+
+              <div className='input-group mt-4'>
+                <button className='btn btn-lg btn-primary w-100 fs-6'>Sign Up</button>
+              </div>
+
+              <div className='input-group mt-3 mb-2'>
+                <button className='btn btn-lg btn-light w-100 fs-6'><img src={googlelogo} style={{width: "30px"}} alt=""  className='me-2'/>Sign Up with Google</button>
+              </div>
             </div>
-          </div>
 
-          <div className="w-1/2">
-            <img src="/src/images/sidepic.jpg" alt="" />
-          </div>
+          </form>
         </div>
-      </section>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default RegisterPage;
+export default LoginPage
