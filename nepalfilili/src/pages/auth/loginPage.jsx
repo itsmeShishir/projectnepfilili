@@ -5,7 +5,7 @@ import logo from "../../assets/images/sidepic.jpg";
 import googlelogo from "../../assets/images/googleicon.svg";
 
 function LoginPage() {
-  const [data, setData] = useState({ username: "", password: "" });
+  const [data, setData] = useState({ email: "", password: "" });
 
   const handleChange = (e) => {
     setData((prevData) => ({
@@ -17,11 +17,11 @@ function LoginPage() {
   return (
     <div>
       <div className="container d-flex justify-content-center align-items-center min-vh-100">
-        <div className="row border p-2 bg-white shadow box-area w-50">
+        <div className="row border p-2 bg-white shadow box-area w-70">
           <img
             src={logo}
             className="img-fluid mt-2 mb-2"
-            style={{ width: "300px" }}
+            style={{ width: "500px" }}
           />
 
           <form action="POST" className="col-md-6 right-box">
@@ -36,7 +36,8 @@ function LoginPage() {
                   className="form-control form-control-lg bg-light fs-6"
                   placeholder="Enter your Email"
                   onChange={handleChange}
-                  value={data.username}
+                  value={data.email}
+                  name="email"
                   required
                 />
               </div>
@@ -48,6 +49,7 @@ function LoginPage() {
                   placeholder="Enter your Password"
                   onChange={handleChange}
                   value={data.password}
+                  name="password"
                   required
                 />
               </div>
