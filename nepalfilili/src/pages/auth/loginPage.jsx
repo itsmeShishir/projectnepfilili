@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/sidepic.jpg";
 import googlelogo from "../../assets/images/googleicon.svg";
+import HeaderComponent from "../../components/header/headerComponent";
+import FooterComponent from "../../components/footer/footerComponent";
 
 function LoginPage() {
   const [data, setData] = useState({ email: "", password: "" });
@@ -15,7 +17,8 @@ function LoginPage() {
   };
 
   return (
-    <div>
+    <>
+      <HeaderComponent />
       <div className="container d-flex justify-content-center align-items-center min-vh-100">
         <div className="row border p-2 bg-white shadow box-area w-70">
           <img
@@ -25,9 +28,12 @@ function LoginPage() {
           />
 
           <form action="POST" className="col-md-6 right-box">
-            <div className="row align-items-center">
+            <div
+              className="d-flex flex-column align-items-center justify-content-center"
+              style={{ minHeight: "70vh", minWidth: "50vh" }}
+            >
               <div className="header-text mb-4 mx-2">
-                <h1 className="text-center fs-2 mt-4">Sign In</h1>
+                <h1 className="text-center fs-1 mt-4 ">Sign In</h1>
               </div>
 
               <div className="input-group mb-3">
@@ -108,7 +114,8 @@ function LoginPage() {
           </form>
         </div>
       </div>
-    </div>
+      <FooterComponent />
+    </>
   );
 }
 
