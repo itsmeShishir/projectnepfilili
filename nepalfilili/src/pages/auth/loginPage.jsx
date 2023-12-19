@@ -1,57 +1,128 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/sidepic.jpg";
 import googlelogo from "../../assets/images/googleicon.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import HeaderComponent from "../../components/header/headerComponent";
+import {
+  faEnvelope,
+  faLock,
+  faEye,
+  faEyeSlash,
+} from "@fortawesome/free-solid-svg-icons";
 
 function LoginPage() {
-  const [data, setData] = useState({ email: "", password: "" });
+  const [formValue, setFormValue] = useState({ email: "", password: "" });
+  const [formErrors, setFromErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
 
   const handleChange = (e) => {
-    setData((prevData) => ({
-      ...prevData,
-      [e.target.name]: e.target.value,
-    }));
+    const { name, value } = e.target;
+    setFormValue({ ...formValue, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFromErrors(validate(formValue));
+    setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(formValue);
+    }
+  }, [formErrors]);
+
+  const validate = (value) => {
+    const errors = {};
+    const regex = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+
+    if (!value.email) {
+      errors.email = "Email is required";
+    } else if (!regex.test(value.email)) {
+      errors.email = "This is not a Valid Email!";
+    }
+    if (!value.password) {
+      errors.password = "Password is required";
+    } else if (value.password > 4) {
+      errors.password =
+        "Password characters must be set more than 4 characters ";
+    } else if (value.password < 12) {
+      errors.password =
+        "Password characters cannot exceed more than 12 characters";
+    }
+    return errors;
   };
 
   return (
-    <div>
+    <>
+      <HeaderComponent />
       <div className="container d-flex justify-content-center align-items-center min-vh-100">
-        <div className="row border p-2 bg-white shadow box-area w-70">
+        {Object.keys(formErrors).length === 0 && isSubmit}
+        <div className="row border bg-white shadow box-area w-80">
           <img
             src={logo}
-            className="img-fluid mt-2 mb-2"
-            style={{ width: "500px" }}
+            className="img-fluid d-none d-md-block"
+            style={{ width: "500px", padding: "0px" }}
           />
 
-          <form action="POST" className="col-md-6 right-box">
-            <div className="row align-items-center">
-              <div className="header-text mb-4 mx-2">
-                <h1 className="text-center fs-2 mt-4">Sign In</h1>
+          <form
+            onSubmit={handleSubmit}
+            action="POST"
+            className="col-md-6 right-box"
+          >
+            <div
+              className="d-flex flex-column align-items-center justify-content-center"
+              style={{ minHeight: "70vh", minWidth: "50vh" }}
+            >
+              <div className="">
+                <h1>Sing In</h1>
+                <p className="text-center mt-5">Welcome Back to NFilili</p>
               </div>
 
               <div className="input-group mb-3">
+                <span className="input-group-text">
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </span>
                 <input
+                  id="email"
                   type="email"
-                  className="form-control form-control-lg bg-light fs-6"
+                  className="form-control form-control-lg bg-light fs-5"
                   placeholder="Enter your Email"
                   onChange={handleChange}
-                  value={data.email}
-                  name="email"
+                  value={formValue.username}
                   required
                 />
               </div>
 
               <div className="input-group mb-1">
+                <span className="input-group-text">
+                  <FontAwesomeIcon icon={faLock} />
+                </span>
                 <input
-                  type="password"
-                  className="form-control form-control-lg bg-light fs-6"
+                  id="password"
+                  type={passwordVisible ? "text" : "password"}
+                  className="form-control form-control-lg bg-light fs-5"
                   placeholder="Enter your Password"
                   onChange={handleChange}
-                  value={data.password}
                   name="password"
+                  value={formValue.password}
                   required
                 />
+                <button
+                  className="btn btn-outline-secondary"
+                  type="button"
+                  onClick={togglePasswordVisibility}
+                >
+                  <FontAwesomeIcon
+                    icon={passwordVisible ? faEyeSlash : faEye}
+                  />
+                </button>
               </div>
 
               <div className="input-group mt-2 d-flex justify-content-between">
@@ -62,7 +133,7 @@ function LoginPage() {
                     id="formCheck"
                   />
                   <label
-                    for="formCheck"
+                    htmlFor="formCheck"
                     className="form-check-label text-secondary"
                   >
                     <small>Remember Me</small>
@@ -71,19 +142,25 @@ function LoginPage() {
 
                 <div className="forgot">
                   <small>
-                    <a href="#">Forgot Password?</a>
+                    <a href="/auth/forgetpassword">Forgot Password?</a>
                   </small>
                 </div>
               </div>
 
               <div className="input-group mt-5">
-                <button className="btn btn-lg btn-primary w-100 fs-6">
+                <button
+                  type="submit"
+                  className="btn btn-lg btn-primary w-100 fs-5"
+                >
                   Login
                 </button>
               </div>
 
               <div className="input-group mt-3 mb-2">
-                <button className="btn btn-lg btn-light w-100 fs-6">
+                <button
+                  type="submit"
+                  className="btn btn-lg btn-light w-100 fs-6"
+                >
                   <img
                     src={googlelogo}
                     style={{ width: "30px" }}
@@ -93,7 +170,7 @@ function LoginPage() {
                   Sign in with Google
                 </button>
               </div>
-              <div className="row mb-2 fs-6">
+              <div className="row mb-2 fs-5">
                 <small>
                   Don't have an account?{" "}
                   <Link
@@ -108,7 +185,7 @@ function LoginPage() {
           </form>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
