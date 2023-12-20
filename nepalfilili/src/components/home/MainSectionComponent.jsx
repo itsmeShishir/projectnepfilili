@@ -1,14 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const MainSectionComponent = () => {
+  const [service, setService] = useState({ servic: "", locations: "" });
+
+  const handleChange = (e) => {
+    setService((prevData) => ({
+      ...prevData,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <div>
-      <section id="hero" class="hero d-flex align-items-center">
+      <section class="hero d-flex align-items-center">
         <div class="container">
           <div class="row">
             <div class="col-lg-6 d-flex flex-column justify-content-center">
@@ -26,6 +35,27 @@ const MainSectionComponent = () => {
                     <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
+              </div>
+              <div className="d-flex mx-2 justify-content-center">
+                <input
+                  type="text"
+                  className="form-control form-control-lg bg-light fs-5"
+                  placeholder="Search service or Companies"
+                  onChange={handleChange}
+                  value={service.servic}
+                  name="servic"
+                  required
+                />
+                <input
+                  type="text"
+                  className="form-control form-control-lg bg-light fs-5"
+                  placeholder="Enter Location"
+                  onChange={handleChange}
+                  value={service.locations}
+                  name="locations"
+                  required
+                />
+                <h1 className="btn btn-primary fs-5">Search</h1>
               </div>
             </div>
             <div
