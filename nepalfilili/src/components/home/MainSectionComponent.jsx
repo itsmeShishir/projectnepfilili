@@ -36,10 +36,14 @@ const MainSectionComponent = () => {
                   </a>
                 </div>
               </div>
-              <div className="d-flex mx-2 justify-content-center">
+              <div
+                data-aos="fade-up"
+                data-aos-delay="700"
+                className="d-flex align-items-center my-2 justify-content-center"
+              >
                 <input
                   type="text"
-                  className="form-control form-control-lg bg-light fs-5"
+                  className="form-control form-control-lg bg-light fs-5 "
                   placeholder="Search service or Companies"
                   onChange={handleChange}
                   value={service.servic}
@@ -48,7 +52,7 @@ const MainSectionComponent = () => {
                 />
                 <input
                   type="text"
-                  className="form-control form-control-lg bg-light fs-5"
+                  className="form-control form-control-lg bg-light fs-5 mx-2"
                   placeholder="Enter Location"
                   onChange={handleChange}
                   value={service.locations}
@@ -65,7 +69,7 @@ const MainSectionComponent = () => {
             >
               <video className="img-fluid" autoPlay muted loop>
                 <source src="assets/video/vidoe.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
+                Your browser does not support the video format.
               </video>
             </div>
           </div>
