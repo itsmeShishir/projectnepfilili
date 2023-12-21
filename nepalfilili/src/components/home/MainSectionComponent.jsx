@@ -39,7 +39,7 @@ const MainSectionComponent = () => {
               <div
                 data-aos="fade-up"
                 data-aos-delay="700"
-                className="d-flex align-items-center my-2 justify-content-center"
+                className="d-flex align-items-center my-4 justify-content-center"
               >
                 <input
                   type="text"
