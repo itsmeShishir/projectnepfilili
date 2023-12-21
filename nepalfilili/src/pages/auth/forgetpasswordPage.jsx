@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import logo from "../../assets/images/sidepic.jpg";
-import googlelogo from "../../assets/images/googleicon.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HeaderComponent from "../../components/header/headerComponent";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -10,11 +7,6 @@ function ForgetPasswordPage() {
   const [formValue, setFormValue] = useState({ email: "", password: "" });
   const [formErrors, setFromErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const [passwordVisible, setPasswordVisible] = useState(false);
-
-  const togglePasswordVisibility = () => {
-    setPasswordVisible(!passwordVisible);
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
