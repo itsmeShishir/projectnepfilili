@@ -1,24 +1,76 @@
 import React from "react";
+import BlogProps from "../propss/BlogProps";
+import { Link } from "react-router-dom";
 
 const BlogComponent = () => {
   return (
     <>
-      <div class="col-lg-4">
-        <div class="post-box">
-          <div class="post-img">
-            <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="" />
-          </div>
-          <span class="post-date">Tue, September 15</span>
-          <h3 class="post-title">
-            Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur
-            sit
-          </h3>
-          <a href="blog-single.html" class="readmore stretched-link mt-auto">
-            <span>Read More</span>
-            <i class="bi bi-arrow-right"></i>
-          </a>
+      <section class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/blogs">Blog</Link>
+            </li>
+            <li>Blogs</li>
+          </ol>
+          <h2>All Blog</h2>
         </div>
-      </div>
+      </section>
+      <section class="recent-blog-posts">
+        <div class="container">
+          <header class="section-header ">
+            <h2 class=" fs-4">Blog</h2>
+            <p>Recent posts form our Blog</p>
+          </header>
+          <div class="row">
+            <BlogProps
+              image="assets/img/blog/blog-1.jpg"
+              date="Fri, August 28"
+              title="Eum ad dolor et. Autem aut fugiat debitis voluptatem
+                  consequuntur sit"
+              description="Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+            />
+            <BlogProps
+              image="assets/img/blog/blog-2.jpg"
+              date="Fri, August 28"
+              title="Eum ad dolor et. Autem aut fugiat debitis voluptatem
+                  consequuntur sit"
+              description="Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+            />
+            <BlogProps
+              image="assets/img/blog/blog-3.jpg"
+              date="Fri, August 28"
+              title="Eum ad dolor et. Autem aut fugiat debitis voluptatem
+                  consequuntur sit"
+              description="Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+            />
+            <BlogProps
+              image="assets/img/blog/blog-1.jpg"
+              date="Fri, August 28"
+              title="Eum ad dolor et. Autem aut fugiat debitis voluptatem
+                  consequuntur sit"
+              description="Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+            />
+            <BlogProps
+              image="assets/img/blog/blog-2.jpg"
+              date="Fri, August 28"
+              title="Eum ad dolor et. Autem aut fugiat debitis voluptatem
+                  consequuntur sit"
+              description="Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+            />
+            <BlogProps
+              image="assets/img/blog/blog-3.jpg"
+              date="Fri, August 28"
+              title="Eum ad dolor et. Autem aut fugiat debitis voluptatem
+                  consequuntur sit"
+              description="Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+            />
+          </div>
+        </div>
+      </section>
     </>
   );
 };
