@@ -60,7 +60,7 @@ const HeaderComponent = () => {
                 </Link>
               </li>
               <li>
-                <Link className="nav-link scrollto" to="/aboutus">
+                <Link className="nav-link scrollto" to="/contact">
                   Contact
                 </Link>
               </li>
