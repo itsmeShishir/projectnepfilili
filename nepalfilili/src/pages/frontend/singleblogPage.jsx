@@ -1,16 +1,16 @@
 import React from "react";
-import BlogComponent from "../../components/blog/blogComponent";
 import HeaderComponent from "../../components/header/headerComponent";
 import FooterComponent from "../../components/footer/footerComponent";
+import SingleBlogComponent from "../../components/singleblog/SingleBlogComponent";
 
-const BlogPage = () => {
+const SingleBlogPage = () => {
   return (
-    <>
+    <div>
       <HeaderComponent />
-      <BlogComponent />
+      <SingleBlogComponent />
       <FooterComponent />
-    </>
+    </div>
   );
 };
 
-export default BlogPage;
+export default SingleBlogPage;
