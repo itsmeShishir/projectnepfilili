@@ -1,6 +1,7 @@
 import React from "react";
 import { BiSolidDirections } from "react-icons/bi";
 import LocationComponents from "../propss/locationComponent";
+import { locationsData } from "../../mockData/data";
 
 const CategoryComponents = () => {
   return (
@@ -12,22 +13,11 @@ const CategoryComponents = () => {
         </h1>
         <div className="container mt-5 mb-5">
           <div className="row ">
-            <LocationComponents location="Kathmandu" />
-            <LocationComponents location="Pokhara" />
-            <LocationComponents location="Biratnagar" />
-            <LocationComponents location="Birgunj" />
-            <LocationComponents location="Dharan" />
-            <LocationComponents location="Bharatpur" />
-            <LocationComponents location="Nepalgunj" />
-            <LocationComponents location="Butwal" />
-            <LocationComponents location="Hetauda" />
-            <LocationComponents location="Bhaktapur" />
-            <LocationComponents location="Janakpur" />
-            <LocationComponents location="Banepa" />
-            <LocationComponents location="Itahari" />
-            <LocationComponents location="Dhangadhi" />
-            <LocationComponents location="Kirtipur" />
-            <LocationComponents location="See All" />
+            {
+              locationsData.map((location,index)=>(
+                <LocationComponents key={index} location={location}/>
+              ))
+            }
           </div>
         </div>
       </div>
