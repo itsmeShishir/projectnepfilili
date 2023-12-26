@@ -1,6 +1,6 @@
 import React from "react";
 import { BiSolidDirections } from "react-icons/bi";
-import LocationComponents from "../header/locationComponent";
+import LocationComponents from "../propss/locationComponent";
 
 const CategoryComponents = () => {
   return (
