@@ -12,6 +12,7 @@ import ErrorPage from "./pages/error/errorPage";
 import LoginPage from "./pages/auth/loginPage";
 import RegisterPage from "./pages/auth/registerPage";
 import ForgetPasswordPage from "./pages/auth/forgetpasswordPage";
+import SingleBlogPage from "./pages/frontend/singleblogPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="aboutus" element={<AboutPage />} />
       <Route path="blogs" element={<BlogPage />} />
+      <Route path="blogs/singleblog" element={<SingleBlogPage />} />
       <Route path="category" element={<CategoryPage />} />
       <Route path="jobs" element={<JobsPage />} />
       <Route path="location" element={<LocationPage />} />
