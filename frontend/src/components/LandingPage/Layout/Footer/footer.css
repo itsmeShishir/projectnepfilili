@@ -1,0 +1,176 @@
+
+.footer__wrapper {
+    background: #f8f8f8
+}
+
+.footer__wrapper .footer__container {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 80px 0;
+    padding-bottom: 0;
+    max-width: 90%;
+}
+
+@media screen and (max-width: 1350px) {
+    .footer__wrapper .footer__container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .footer__wrapper .footer__container {
+        flex-wrap: wrap;
+    }
+}
+
+.footer__wrapper .footer__container .foot__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer__wrapper .footer__container .foot__content {
+        flex-direction: column;
+    }
+}
+
+.footer__wrapper .footer__container .foot__content .left__footer__content .left__content .logo__section .heading {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer__wrapper .footer__container .foot__content .left__footer__content .left__content .logo__section .heading img {
+    height: 63px;
+}
+
+.footer__wrapper .footer__container .foot__content .left__footer__content .left__content .foot__social__icon__container {
+    margin-top: 20px;
+    display: flex;
+    gap: 7px;
+}
+
+.footer__wrapper .footer__container .foot__content .left__footer__content .left__content .foot__social__icon__container .social__icon {
+    text-decoration: none;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.footer__wrapper .footer__container .foot__content .left__footer__content .left__content .foot__social__icon__container .social__icon .sci {
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer__wrapper .footer__container .foot__content .left__footer__content .left__content .foot__social__icon__container .social__icon.fb__icon {
+    background: #3b5998;
+}
+
+.footer__wrapper .footer__container .foot__content .left__footer__content .left__content .foot__social__icon__container .social__icon.insta__icon {
+    background: #8a3ab9;
+}
+
+.footer__wrapper .footer__container .foot__content .right__footer__content {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer__wrapper .footer__container .foot__content .right__footer__content {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+}
+
+.footer__wrapper .footer__container .foot__content .right__footer__content .link__content {
+    margin-left: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer__wrapper .footer__container .foot__content .right__footer__content .link__content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .footer__wrapper .footer__container .foot__content .right__footer__content .link__content {
+        margin-top: 40px;
+    }
+}
+
+.footer__wrapper .footer__container .foot__content .right__footer__content .link__content .foot__title {
+    color: #333;
+    font-size: 17.969px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.footer__wrapper .footer__container .foot__content .right__footer__content .link__content .foot__links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.footer__wrapper .footer__container .foot__content .right__footer__content .link__content .foot__links a {
+    color: #000;
+    font-size: 14.297px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer__wrapper .footer__container .foot__content .right__footer__content .link__content .foot__links a:hover {
+    color: #f4821f;
+}
+
+.footer__wrapper .footer__container .foot__content .right__footer__content .link__content .foot__links .foot__contact .contact {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.footer__wrapper .footer__container .foot__content .right__footer__content .link__content .foot__links p {
+    color: #000;
+    font-size: 14.297px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.footer__wrapper .footer__container .foot__content .right__footer__content .link__content .foot__links .email {
+    font-size: 13.242px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 29px;
+    text-decoration: none;
+    color: #f4821f;
+}
+
+.footer__wrapper .footer__container .footer__bottom {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eae7e7;
+}
+
+.footer__wrapper .footer__container .footer__bottom p {
+    color: #000;
+    font-size: 14.25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+.footer__wrapper .footer__container .footer__bottom p a {
+    text-decoration: none;
+    color: #f4821f;
+}

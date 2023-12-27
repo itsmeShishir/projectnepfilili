@@ -1,0 +1,116 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 1px solid #f8f8f8;
+    background: #fff;
+}
+
+header nav {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    max-width: 90%;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    
+}
+header nav ul li a{
+    color: #222;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+header nav ul li a:hover{
+    color: #f4821f;
+}
+@media screen and (max-width: 1280px) {
+    header nav {
+        width: 90%;
+    }
+}
+
+header nav .logo__section a {
+    text-decoration: none;
+    
+}
+
+header nav .logo__section a img {
+    width: 69px;
+    height: 63px;
+}
+
+header nav .hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+    header nav .hamburger {
+        display: block;
+    }
+
+    header nav .hamburger .icon {
+        font-size: 20px
+    }
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 750px) {
+    header nav ul {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        padding: 20px;
+        height: 100vh;
+        width: calc(100% - 40px);
+        display: flex;
+        flex-direction: column;
+        background: #fdfdfd;
+        box-shadow: 0px 30px 40px 0px rgba(160, 209, 213, .1);
+        gap: 20px;
+        align-items: start;
+        display: none;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+}
+
+header nav ul .crossBtn {
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+    header nav ul .crossBtn {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+}
+
+header nav ul .crossBtn .icon {
+    position: absolute;
+    right: 0;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
