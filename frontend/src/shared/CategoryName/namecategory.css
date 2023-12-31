@@ -1,0 +1,30 @@
+.main_info {
+  margin: 10px 0;
+}
+.category_title {
+  font-weight: 500;
+  font-size: 20px;
+}
+.category_sub {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.name {
+  width: calc(25% - 10px);
+  margin: 5px 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 400;
+  color: #414141;
+}
+.name span {
+  color: #0189ff;
+  font-weight: 500;
+  font-variant-caps: petite-caps;
+}
+@media only screen and (max-width: 600px) {
+  .name {
+    display: block;
+  }
+}

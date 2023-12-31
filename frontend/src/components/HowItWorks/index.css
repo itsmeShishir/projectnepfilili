@@ -1,0 +1,91 @@
+.pricing{
+    text-align: center;
+    margin-top: 6rem;
+}   
+
+.container{
+    height: 40rem;
+    display: flex;
+}
+
+.card{
+    border: 2px solid rgb(201, 201, 201);
+    width: 20rem;
+    height: 20rem;
+    margin-top: 6rem;
+    margin-left: 25rem;
+}
+
+.search{
+    margin-left: 8rem;
+    margin-top: 2rem;
+}
+
+.cardtitle{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.carddesc{
+    margin-top: -10px;
+    text-align: justify;
+    padding: 2rem;
+    font-size: small;
+}
+
+.card2{
+    border: 2px solid rgb(201, 201, 201);
+    width: 20rem;
+    height: 20rem;
+    margin-top: 6rem;
+    margin-left: 5rem;
+}
+
+.cardtitle2{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+
+.search2{
+    margin-left: 8rem;
+    margin-top: 2rem;
+}
+
+.carddesc2{
+    margin-top: -10px;
+    text-align: center;
+    padding: 2rem;
+    font-size: small;
+}
+
+.card3{
+    border: 2px solid rgb(201, 201, 201);
+    width: 20rem;
+    height: 20rem;
+    margin-top: 6rem;
+    margin-left: 5rem;
+}
+
+.search3{
+    margin-left: 8rem;
+    margin-top: 2rem;
+}
+
+.cardtitle3{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.carddesc3{
+    margin-top: -10px;
+    text-align: justify;
+    padding: 2rem;
+    font-size: small;
+}

@@ -1,0 +1,25 @@
+body {
+  background-color: #fff;
+}
+.container {
+  width: 1290px;
+  position: relative;
+  top: 70px;
+}
+.topbar {
+  font-size: 13px;
+  color: red;
+  margin: 2px 0px;
+  letter-spacing: 1px;
+}
+.topbar .topbar_link {
+  color: #0189ff;
+}
+.maintitle {
+  font-size: 36px;
+  font-weight: 600;
+}
+.maininfo {
+  font-size: 15px;
+  color: #000;
+}
