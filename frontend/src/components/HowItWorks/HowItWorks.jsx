@@ -8,9 +8,9 @@ const HowItWorks = () => {
     <div className='hiw__wrapper'>
       <div className="hiw__container">
         
-        <section className='pricing'>
+      <section className='pricing'>
               <h2>How it Works</h2>
-              <p className="lead text-muted">Bringing business and community members together</p>
+              <p className="lead">Bringing business and community members together</p>
         </section>
 
         <div className='container'>
