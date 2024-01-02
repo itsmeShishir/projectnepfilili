@@ -6,16 +6,15 @@ import { TfiWrite } from "react-icons/tfi";
 const HowItWorks = () => {
   return (
     <div className='hiw__wrapper'>
-      <div className="hiw__container">
-        
+      <div className="hiw__container">                
       <section className='pricing'>
               <h2>How it Works</h2>
               <p className="lead">Bringing business and community members together</p>
         </section>
 
-        <div className='container'>
+        <div className='container-section'>
             <div className="card">  
-                <CiSearch size={70} className='search' />
+                <CiSearch size={80} className='search' />
 
                 <div className='cardtitle'>
                   <p>Find Businesses</p>
@@ -50,7 +49,6 @@ const HowItWorks = () => {
                 </div>
             </div>
         </div>
-
       </div>
     </div>
   )
