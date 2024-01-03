@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "../../../components/LandingPage/Layout/Header/Header";
+import Footer from "../../../components/LandingPage/Layout/Footer/Footer";
 import "./signup.css"
 
 
@@ -6,6 +8,8 @@ const Register = () => {
   return <div>
 
 <div>
+    <Header />
+
     <div className="sign-up-container">
      <div className="sign-up-box">
        <div className="sign-up-header">
@@ -18,6 +22,10 @@ const Register = () => {
 
        <div className="input-box-last-name">
          <input type="text" id='user' placeholder='Last Name' className='input-field' required />
+       </div>
+
+       <div className="input-box-username">
+         <input type="text" id='user' placeholder='Username' className='input-field' required />
        </div>
 
        <div className="input-box-address">
@@ -57,6 +65,7 @@ const Register = () => {
      </div>
     </div>
  </div>    
+    <Footer />
 
   </div>;
 };

@@ -1,18 +1,19 @@
 .sign-up-container{
-    margin-top: 50px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
+    padding: 30px;
 }
 
 .sign-up-box{
+    margin-top: 6rem;
     position: relative;
     width: 450px;
     border: 2px solid black;
     border-radius: 15px;
-    padding: 8rem 3rem 4rem 3rem;
+    padding: 10rem 3rem 4rem 3rem;
 }
 
 .sign-up-header{

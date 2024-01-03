@@ -1,9 +1,9 @@
-.pricing{
+.main-title{
     text-align: center;
     padding-top: 8rem;
 }
 
-.pricing h2{
+.main-title h2{
     font-weight: 400;
 }
 
@@ -16,7 +16,7 @@
 .container-section{
     width: 60%;
     padding: 5rem;
-    margin-left: 20rem;
+    margin-left: 18rem;
 }
 
 .card{
@@ -99,4 +99,280 @@
     padding-left: 35px;
     font-size: small;
     text-align: center;
+}
+
+.main-title2{
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.main-title2 h2{
+    font-weight: 400;
+}
+
+.mid-section{
+    width: 60%;
+    padding: 5rem;
+    margin-left: 18rem;
+}
+
+.mid-card p{
+    position: absolute;
+    top: 133%;
+    left: 36%;
+    color: white;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.mid-card{
+    height: 250px;
+    width: 750px;
+    border: 1px gray solid;
+}
+
+.mid-card img{
+    width: 750px;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.mid-card img:hover{
+    filter: brightness(100%);
+    transition-duration: 250ms;
+    cursor: pointer; 
+}
+
+.mid-card2{
+    margin-top: -252px;
+    margin-left: 800px;
+    height: 250px;
+    width: 350px;
+    border: 1px gray solid;
+}
+
+.mid-card2 p{
+    position: absolute;
+    top: 133%;
+    left: 68%;
+    color: white;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.mid-card2 img{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.mid-card2 img:hover{
+    filter: brightness(100%);
+    transition-duration: 250ms;
+    cursor: pointer;
+}
+
+.mid-card3{
+    margin-top: 40px;
+    height: 250px;
+    width: 350px;
+    border: 1px gray solid;
+}
+
+.mid-card3 p{
+    position: absolute;
+    top: 163%;
+    left: 25%;
+    color: white;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.mid-card3 img{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.mid-card3 img:hover{
+    filter: brightness(100%);
+    transition-duration: 250ms;
+    cursor: pointer;
+}
+
+.mid-card4{
+    margin-top: -252px;
+    margin-left: 400px;
+    height: 250px;
+    width: 350px;
+    border: 1px gray solid;
+}
+
+.mid-card4 p{
+    position: absolute;
+    top: 163%;
+    left: 46%;
+    color: white;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.mid-card4 img{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.mid-card4 img:hover{
+    filter: brightness(100%);
+    transition-duration: 250ms;
+    cursor: pointer;
+}
+
+.mid-card5{
+    margin-top: -252px;
+    margin-left: 800px;
+    height: 250px;
+    width: 350px;
+    border: 1px gray solid;
+}
+
+.mid-card5 p{
+    position: absolute;
+    top: 163%;
+    left: 68%;
+    color: white;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.mid-card5 img{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.mid-card5 img:hover{
+    filter: brightness(100%);
+    transition-duration: 250ms;
+    cursor: pointer;
+}
+
+.main-title3{
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.main-title3 h2{
+    font-weight: 400;
+}
+
+.mid-section2{
+    margin-top: -3rem;
+    width: 60%;
+    padding: 5rem;
+    margin-left: 18rem;
+}
+
+.mid-section-card2{
+    margin-top: 40px;
+    height: 250px;
+    width: 350px;
+    border: 1px gray solid;
+}
+
+.mid-section-card2 img{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.mid-section-card3{
+    margin-top: -252px;
+    margin-left: 400px;
+    height: 250px;
+    width: 350px;
+    border: 1px gray solid;
+}
+
+.mid-section-card3 img{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.mid-section-card4{
+    margin-top: -252px;
+    margin-left: 800px;
+    height: 250px;
+    width: 350px;
+    border: 1px gray solid;
+}
+
+.mid-section-card4 img{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.mid-section-card2 h4{
+    position: absolute;
+    top: 223%;
+    left: 20%;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.mid-section-card2 p{
+    position: absolute;
+    top: 226%;
+    left: 20%;
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.mid-section-card3 h4{
+    position: absolute;
+    top: 223%;
+    left: 41%;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.mid-section-card3 p{
+    position: absolute;
+    top: 226%;
+    left: 41%;
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.mid-section-card4 h4{
+    position: absolute;
+    top: 223%;
+    left: 62%;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.mid-section-card4 p{
+    position: absolute;
+    top: 226%;
+    left: 62%;
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
 }
